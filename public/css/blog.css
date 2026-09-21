@@ -1,0 +1,364 @@
+/* =====================================================
+   BLOG MANAGEMENT CSS
+   Foundation Management System
+===================================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root{
+
+    --primary:#01205a;
+    
+
+    --light:#f8f9fa;
+    --white:#ffffff;
+    --dark:#212529;
+    --border:#e5e5e5;
+    --gray:#6c757d;
+
+}
+
+/* =========================
+   RESET
+========================= */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    background:#f4f6fb;
+    font-family:'Poppins',sans-serif;
+    color:var(--dark);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.card-header{
+
+    background:var(--primary);
+    color:#fff;
+    font-size:20px;
+    font-weight:600;
+    padding:18px 25px;
+
+}
+
+/* =========================
+   FORM
+========================= */
+
+label{
+
+    font-weight:600;
+    margin-bottom:8px;
+    display:block;
+
+}
+
+.form-label{
+    color:var(--primary);
+}
+
+.form-control,
+.form-select{
+
+    border-radius:12px;
+    min-height:48px;
+    border:1px solid #ddd;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:var(--primary);
+
+}
+
+textarea.form-control{
+
+    resize:none;
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.blue{
+    
+    background:var(--primary);
+    color: white;
+    border-radius:10px;
+    font-weight:500;
+    border:none;
+
+}
+
+
+.blue:hover{
+
+    color:#F15b43;
+    border:2px solid #F15b43;
+
+}
+
+.btn-warning{
+
+    color:#fff;
+
+}
+
+.btn-sm{
+
+    width:38px;
+    height:38px;
+
+}
+
+/* =========================
+   IMAGE PREVIEW
+========================= */
+
+#preview{
+
+    display:none;
+    width:100%;
+    max-height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    border:2px dashed var(--primary);
+    padding:5px;
+
+}
+
+.blog-img{
+
+    width:80px;
+    height:60px;
+    object-fit:cover;
+    border-radius:10px;
+    border:2px solid #eee;
+
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.table{
+
+    vertical-align:middle;
+
+}
+
+.table thead{
+
+    /* background:var(--primary); */
+    color:white;
+
+}
+
+.table th{
+
+    font-weight:600;
+    border:none;
+    color:var(--primary);
+
+}
+
+.table td{
+
+    vertical-align:middle;
+
+}
+
+.table-hover tbody tr:hover{
+
+    background:#faf5ff;
+
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.badge{
+
+    padding:8px 14px;
+    font-size:13px;
+    border-radius:30px;
+
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+input[type="search"]{
+
+    border-radius:30px;
+
+}
+
+/* =========================
+   IMAGE UPLOAD
+========================= */
+
+input[type=file]{
+
+    padding:12px;
+
+}
+
+/* =========================
+   FEATURED CHECKBOX
+========================= */
+
+.form-check-input{
+
+    width:22px;
+    height:22px;
+
+}
+
+.form-check-input:checked{
+
+    background:var(--primary);
+    border-color:var(--primary);
+
+}
+
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination .page-link{
+
+    color:var(--primary);
+
+}
+
+.pagination .active .page-link{
+
+    background:var(--primary);
+    border-color:var(--primary);
+
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.card{
+
+    animation:fadeIn .5s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+    .card-header{
+
+        text-align:center;
+
+    }
+
+    .main-content{
+        margin-left:0;
+        padding-top:70px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .btn{
+
+        width:100%;
+        margin-bottom:10px;
+
+    }
+
+    .blog-img{
+
+        width:60px;
+        height:50px;
+
+    }
+
+    .table{
+
+        font-size:14px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .container-fluid{
+
+        padding:15px;
+
+    }
+
+    .card-header{
+
+        font-size:18px;
+
+    }
+
+}

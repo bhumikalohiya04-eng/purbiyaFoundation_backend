@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Slider Master</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/slider.css">
+
+</head>
+
+<body>
+    <div id="sidebar-container"></div>
+    <div class="container py-4">
+
+                <!-- Add Slider -->
+
+        <div class="card shadow border-0 rounded-4 mb-5">
+
+            <div class="card-header text-white">
+
+                <h5 class="mb-0">
+                    
+                    <i class="bi bi-plus-circle"></i>
+
+                    Add Slider
+
+                </h5>
+
+            </div>
+
+            <div class="card-body">
+                
+                <form action="/slider/add" method="POST" enctype="multipart/form-data">
+
+                    <div class="row">
+
+                        <!-- Image -->
+
+                        <div class="col-md-4">
+
+                            <label class="form-label">
+
+                                Slider Image
+
+                            </label>
+                            
+                            <input type="file" class="form-control" id="sliderImage" name="image" accept="image/*">
+                            
+                            <img id="previewImage" class="img-fluid mt-3 rounded shadow-sm d-none">
+
+                        </div>
+
+                        <!-- Details -->
+                        
+                        <div class="col-md-8">
+                            
+                            <div class="mb-3">
+                                
+                                <label class="form-label">
+
+                                    Title One
+                                    
+                                </label>
+                                
+                                <input type="text" name="titleOne" class="form-control" placeholder="Enter first title">
+
+                            </div>
+
+                            <div class="mb-3">
+                                
+                                <label class="form-label">
+
+                                    Title Two
+
+                                </label>
+
+                                <input type="text" name="titleTwo" class="form-control"
+                                    placeholder="Enter second title">
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Button Text (Optional)
+
+                                </label>
+
+                                <input type="text" name="buttonText" class="form-control" placeholder="Learn More">
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Button Link
+                                    
+                                </label>
+                                
+                                <input type="text" name="buttonLink" class="form-control" placeholder="/about">
+
+                            </div>
+                            
+                            <div class="mt-4">
+                                
+                                <button class="btn blue">
+
+                                    <i class="bi bi-check-circle"></i>
+
+                                    Save Slider
+
+                                </button>
+
+                                <button type="reset" class="btn btn-warning">
+
+                                    Reset
+
+                                </button>
+
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </form>
+                
+            </div>
+            
+        </div>
+        
+        <!-- Manage Slider -->
+
+        <div class="card shadow border-0 rounded-4">
+            
+            <div class="card-header text-white">
+                
+                <div class="d-flex justify-content-between align-items-center">
+
+                    <h5 class="mb-0">
+                        
+                        Manage Sliders
+                        
+                    </h5>
+                    
+                    <input type="text" id="searchSlider" class="form-control w-25" placeholder="Search">
+                    
+                </div>
+                
+            </div>
+            
+            <div class="card-body">
+
+                <div class="table-responsive">
+                    
+                    <table class="table table-hover align-middle">
+
+                        <thead>
+                            
+                            <tr>
+                                
+                                <th>#</th>
+                                
+                                <th>Image</th>
+
+                                <th>Title One</th>
+
+                                <th>Title Two</th>
+                                
+                                <th>Status</th>
+                                
+                                <th>Actions</th>
+                                
+                            </tr>
+                            
+                        </thead>
+                        
+                        <tbody>
+                            
+                            <tr>
+                                
+                                <td>1</td>
+                                
+                                <td>
+                                    
+                                    <img src="/uploads/sample-slider.jpg" class="slider-thumb">
+
+                                </td>
+
+                                <td>
+                                    
+                                    Welcome to Foundation
+
+                                </td>
+                                
+                                <td>
+                                    
+                                    Empowering Communities
+
+                                </td>
+
+                                <td>
+
+                                    <span class="badge bg-success">
+
+                                        Active
+
+                                    </span>
+
+                                </td>
+                                
+                                <td>
+                                    
+                                    <button class="btn btn-warning btn-sm">
+
+                                        <i class="bi bi-pencil"></i>
+                                        
+                                    </button>
+
+                                    <button class="btn btn-danger btn-sm">
+
+                                        <i class="bi bi-trash"></i>
+                                        
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <footer class="text-center mt-5 text-muted">
+            
+            © 2026 Foundation Management System
+            
+        </footer>
+        
+    </div>
+    </div>
+    </div>
+    
+    <script src="/js/slider.js"></script>
+    <script src="/components/sidebar.js"></script>
+</body>
+
+</html>

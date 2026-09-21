@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings Master</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/setting.css">
+
+</head>
+
+<body>
+    <div id="sidebar-container"></div>
+<div class="container py-4">
+<div class="container-fluid">
+    
+    <!-- Settings Card -->
+
+    <div class="card shadow border-0 rounded-4">
+
+        <div class="card-header">
+
+            <h5 class="mb-0">
+
+                <i class="bi bi-sliders"></i>
+
+                Manage Settings
+
+            </h5>
+
+        </div>
+
+        <div class="card-body">
+
+            <form
+                id="settingsForm"
+                enctype="multipart/form-data">
+
+                <div class="row">
+
+                    <!-- Current QR -->
+
+                    <div class="col-lg-6 text-center mb-4">
+
+                        <label class="form-label fw-bold">
+
+                            Current QR Code
+
+                        </label>
+
+                        <br>
+
+                        <img
+                            src="/images/qr-placeholder.png"
+                            id="qrPreview"
+                            class="setting-image">
+
+                    </div>
+
+                    <!-- Current Video -->
+
+                    <div class="col-lg-6 text-center mb-4">
+
+                        <label class="form-label fw-bold">
+
+                            Current Event Video
+
+                        </label>
+
+                        <br>
+
+                        <video
+                            id="videoPreview"
+                            class="setting-video"
+                            controls>
+
+                            <source
+                                src="/videos/sample.mp4"
+                                type="video/mp4">
+
+                        </video>
+
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Upload New QR Code
+
+                        </label>
+
+                        <input
+                            type="file"
+                            id="qrUpload"
+                            class="form-control"
+                            accept="image/*">
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+
+                            Upload New Event Video
+
+                        </label>
+
+                        <input
+                            type="file"
+                            id="videoUpload"
+                            class="form-control"
+                            accept="video/*">
+
+                    </div>
+
+                </div>
+
+                <div class="mt-4">
+
+                    <button
+                        type="submit"
+                        class="btn blue">
+
+                        <i class="bi bi-save-fill"></i>
+
+                        Save Settings
+
+                    </button>
+
+                    <button
+                        type="reset"
+                        class="btn btn-warning">
+
+                        Reset
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <footer class="text-center mt-5 text-muted">
+
+        © 2026 Purbiya Balika Foundation. All Rights Reserved.
+
+    </footer>
+    </div>
+    </div>
+</div>
+
+<script src="/js/settings.js"></script>
+<script src="/components/sidebar.js"></script>
+</body>
+
+</html>

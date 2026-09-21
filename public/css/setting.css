@@ -1,0 +1,332 @@
+/*=====================================================
+    SETTINGS MASTER CSS
+    Foundation Management System
+=====================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*=====================================================
+    ROOT VARIABLES
+=====================================================*/
+
+:root{
+
+    --primary:#01205a;
+    --white:#ffffff;
+    --light:#f5f6fa;
+    --dark:#212529;
+    --gray:#6c757d;
+    --border:#dee2e6;
+
+}
+
+/*=====================================================
+    GLOBAL
+=====================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f4f6fb;
+
+    color:var(--dark);
+
+}
+
+/*=====================================================
+    CARD
+=====================================================*/
+
+.card{
+
+    border:none;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    animation:fadeIn .4s ease;
+
+}
+
+.card-header{
+
+    background:
+        var(--primary);
+
+    color:#fff;
+
+    padding:18px 25px;
+
+    border:none;
+
+}
+
+.card-header h5{
+
+    margin:0;
+
+    font-weight:600;
+
+}
+
+/*=====================================================
+    LABELS
+=====================================================*/
+
+.form-label{
+
+    font-weight:600;
+
+    color:var(--primary);
+
+}
+
+/*=====================================================
+    INPUT
+=====================================================*/
+
+.form-control{
+
+    height:48px;
+
+    border-radius:10px;
+
+    border:1px solid var(--border);
+
+}
+
+.form-control:focus{
+
+    border-color:var(--primary);
+
+}
+
+/*=====================================================
+    QR IMAGE
+=====================================================*/
+
+.setting-image{
+
+    width:220px;
+
+    height:220px;
+
+    object-fit:contain;
+
+    background:#fff;
+
+    border:4px solid var(--primary);
+
+    border-radius:15px;
+
+    padding:10px;
+
+    transition:.3s;
+
+}
+
+.setting-image:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*=====================================================
+    VIDEO
+=====================================================*/
+
+.setting-video{
+
+    width:100%;
+
+    max-width:380px;
+
+    height:220px;
+
+    border-radius:15px;
+
+    border:4px solid var(--primary);
+
+    background:#000;
+
+    object-fit:cover;
+
+}
+
+/*=====================================================
+    BUTTONS
+=====================================================*/
+
+.blue{
+    
+    background:var(--primary);
+    color: white;
+    border-radius:10px;
+    font-weight:500;
+    border:none;
+
+}
+
+
+.blue:hover{
+
+    color:#F15b43;
+    border:2px solid #F15b43;
+
+}
+
+.btn-warning{
+
+    color:#fff;
+
+}
+
+/*=====================================================
+    HORIZONTAL LINE
+=====================================================*/
+
+hr{
+
+    border:1px solid #ddd;
+
+    margin:30px 0;
+
+}
+
+/*=====================================================
+    FOOTER
+=====================================================*/
+
+footer{
+
+    color:var(--gray);
+
+    font-size:14px;
+
+}
+
+/*=====================================================
+    ANIMATION
+=====================================================*/
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=====================================================
+    RESPONSIVE
+=====================================================*/
+
+@media(max-width:992px){
+
+    .setting-image{
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+    .setting-video{
+
+        height:200px;
+
+    }
+    .main-content{
+        margin-left:0;
+        padding-top:70px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .card-header{
+
+        text-align:center;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        margin-bottom:10px;
+
+    }
+
+    .setting-image{
+
+        width:160px;
+
+        height:160px;
+
+    }
+
+    .setting-video{
+
+        width:100%;
+
+        height:180px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .container-fluid{
+
+        padding:15px;
+
+    }
+
+    h2{
+
+        font-size:24px;
+
+    }
+
+    .setting-image{
+
+        width:140px;
+
+        height:140px;
+
+    }
+
+    .setting-video{
+
+        height:160px;
+
+    }
+
+}

@@ -1,0 +1,373 @@
+/*=====================================================
+    EVENTS MASTER CSS
+    Foundation Management System
+=====================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=====================================================
+    ROOT VARIABLES
+=====================================================*/
+
+:root{
+
+    --primary:#01205a;
+
+    --white:#ffffff;
+    --light:#f8f9fa;
+    --dark:#212529;
+    --gray:#6c757d;
+    --border:#dee2e6;
+
+}
+
+/*=====================================================
+    GLOBAL
+=====================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    background:#f4f6fb;
+    font-family:'Poppins',sans-serif;
+    color:var(--dark);
+
+}
+
+/*=====================================================
+    CARD
+=====================================================*/
+
+.card{
+
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.card-header{
+
+    background-color:
+        var(--primary);
+
+    color:#fff;
+
+    padding:18px 25px;
+
+    border:none;
+
+}
+
+.card-header h5{
+
+    margin:0;
+    font-weight:600;
+
+}
+
+/*=====================================================
+    FORM
+=====================================================*/
+
+.form-label{
+
+    font-weight:600;
+    color:var(--primary);
+
+}
+
+.form-control{
+
+    height:48px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+}
+
+textarea.form-control{
+
+    height:auto;
+
+    resize:none;
+
+}
+
+.form-control:focus{
+
+    border-color:var(--primary);
+}
+
+/*=====================================================
+    BUTTONS
+=====================================================*/
+.blue{
+    
+    background:var(--primary);
+    color: white;
+    border-radius:10px;
+    font-weight:500;
+    border:none;
+
+}
+
+
+.blue:hover{
+
+    color:#F15b43;
+    border:2px solid #F15b43;
+
+}
+
+.btn-warning{
+
+    color:#fff;
+
+}
+
+.btn-sm{
+
+    width:38px;
+
+    height:38px;
+
+}
+
+/*=====================================================
+    IMAGE PREVIEW
+=====================================================*/
+
+#previewImage{
+
+    width:180px;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    border:3px solid var(--primary);
+
+    display:none;
+
+}
+
+/*=====================================================
+    TABLE
+=====================================================*/
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+.table thead{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.table thead th{
+
+    border:none;
+
+    padding:15px;
+
+    font-weight:600;
+    color:var(--primary);
+
+}
+
+.table td{
+
+    padding:15px;
+
+    vertical-align:middle;
+
+}
+
+.table-hover tbody tr:hover{
+
+    background:#faf5ff;
+
+}
+
+/*=====================================================
+    EVENT IMAGE
+=====================================================*/
+
+.event-image{
+
+    width:80px;
+
+    height:60px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    border:2px solid #ddd;
+
+    transition:.3s;
+
+}
+
+.event-image:hover{
+
+    transform:scale(1.1);
+
+}
+
+/*=====================================================
+    SEARCH BOX
+=====================================================*/
+
+#searchEvent{
+
+    border-radius:30px;
+
+    max-width:250px;
+
+}
+
+/*=====================================================
+    FOOTER
+=====================================================*/
+
+footer{
+
+    color:var(--gray);
+
+    font-size:14px;
+
+}
+
+/*=====================================================
+    ANIMATION
+=====================================================*/
+
+.card{
+
+    animation:fadeIn .4s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=====================================================
+    RESPONSIVE
+=====================================================*/
+
+@media(max-width:992px){
+
+    .card-header{
+
+        text-align:center;
+
+    }
+
+    #searchEvent{
+
+        width:100%!important;
+
+        max-width:100%;
+
+        margin-top:15px;
+
+    }
+
+    .main-content{
+        margin-left:0;
+        padding-top:70px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .btn{
+
+        width:100%;
+
+        margin-bottom:10px;
+
+    }
+
+    .event-image{
+
+        width:65px;
+
+        height:50px;
+
+    }
+
+    .table{
+
+        font-size:14px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .container-fluid{
+
+        padding:15px;
+
+    }
+
+    h2{
+
+        font-size:24px;
+
+    }
+
+    .card-header{
+
+        font-size:18px;
+
+    }
+
+    #previewImage{
+
+        width:130px;
+
+        height:130px;
+
+    }
+
+}

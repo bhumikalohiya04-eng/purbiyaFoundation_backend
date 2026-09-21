@@ -1,0 +1,386 @@
+/* =====================================================
+   TEAM MASTER CSS
+   Foundation Management System
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =====================================================
+   ROOT VARIABLES
+===================================================== */
+
+:root {
+
+    --primary: #01205a;
+    --white: #ffffff;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #6c757d;
+    --border: #E5E5E5;
+
+}
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+*,
+*::before,
+*::after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,
+body {
+
+    width: 100%; 
+    overflow-x: hidden;
+
+}
+
+body {
+
+    background: #f4f6fb;
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+
+}
+
+h2 {
+
+    font-weight: 700;
+
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card {
+
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .3s ease;
+
+}
+
+.card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+.card-header {
+
+    background: 
+            var(--primary);
+
+    color: #fff;
+
+    padding: 18px 25px;
+
+    border: none;
+
+}
+
+.card-header h5 {
+
+    margin: 0;
+    font-weight: 600;
+
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+label {
+
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    color: #01205a;
+
+}
+
+.form-control {
+
+    border-radius: 12px;
+    min-height: 48px;
+    border: 1px solid #ddd;
+    transition: .3s;
+
+}
+
+.form-control:focus {
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 .18rem rgba(106, 27, 154, .15);
+
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.blue{
+    
+    background:var(--primary);
+    color: white;
+    border-radius:10px;
+    font-weight:500;
+    border:none;
+
+}
+
+
+.blue:hover{
+
+    color:#F15b43;
+    border:2px solid #F15b43;
+
+}
+
+.btn-warning{
+
+    color:#fff;
+
+}
+
+
+.btn-sm {
+
+    width: 38px;
+    height: 38px;
+
+}
+
+/* =====================================================
+   PROFILE IMAGE PREVIEW
+===================================================== */
+
+#previewImage {
+
+    display: none;
+
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid var(--primary);
+
+    margin-top: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table {
+
+    margin-bottom: 0;
+    vertical-align: middle;
+
+}
+
+.table thead {
+
+    background: var(--primary);
+    color: #fff;
+
+}
+
+.table thead th {
+
+    border: none;
+    padding: 15px;
+    font-weight: 600;
+    color: #01205a;
+
+}
+
+.table td {
+
+    padding: 15px;
+    vertical-align: middle;
+
+}
+
+.table-hover tbody tr:hover {
+
+    background: #faf5ff;
+
+}
+
+/* =====================================================
+   TEAM IMAGE
+===================================================== */
+
+.team-image {
+
+    width: 70px;
+    height: 70px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid var(--primary);
+
+    transition: .3s;
+
+}
+
+.team-image:hover {
+
+    transform: scale(1.1);
+
+}
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+#searchMember {
+
+    max-width: 260px;
+
+    border-radius: 30px;
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    margin-top: 30px;
+    color: var(--gray);
+    font-size: 14px;
+
+}
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+.card {
+
+    animation: fadeIn .45s ease;
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:992px) {
+
+    .card-header {
+
+        text-align: center;
+
+    }
+
+    #searchMember {
+
+        width: 100% !important;
+        max-width: 100%;
+        margin-top: 15px;
+
+    }
+
+    .main-content{
+        margin-left:0;
+        padding-top:70px;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .btn {
+
+        width: 100%;
+        margin-bottom: 10px;
+
+    }
+
+    .team-image {
+
+        width: 60px;
+        height: 60px;
+
+    }
+
+    .table {
+
+        font-size: 14px;
+
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .container-fluid {
+
+        padding: 15px;
+
+    }
+
+    h2 {
+
+        font-size: 24px;
+
+    }
+
+    .card-header {
+
+        font-size: 18px;
+
+    }
+
+    #previewImage {
+
+        width: 140px;
+        height: 140px;
+
+    }
+
+}

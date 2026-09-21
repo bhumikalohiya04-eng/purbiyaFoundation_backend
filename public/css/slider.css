@@ -1,0 +1,401 @@
+/* =====================================================
+   SLIDER MASTER CSS
+   Foundation Management System
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =====================================================
+   ROOT COLORS
+===================================================== */
+
+:root{
+
+    --primary:#01205a;
+    --white:#ffffff;
+    --light:#f8f9fa;
+    --border:#e8e8e8;
+    --dark:#222;
+    --gray:#777;
+
+}
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    background:#f4f6fb;
+    font-family:'Poppins',sans-serif;
+    color:var(--dark);
+
+}
+
+
+/* submenu */
+
+/* .submenu{
+    list-style: none;
+    padding-left: 45px;
+    margin: 0;
+}
+
+.submenu li{
+    padding: 10px 0;
+}
+
+.submenu li a {
+    color:#bfc7d5;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.bi{
+    font-size: 18px;
+} */
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card{
+
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s ease;
+
+}
+
+.card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 28px rgba(0,0,0,.08);
+
+}
+
+.card-header{
+
+    background:
+        var(--primary);
+
+    color:#fff;
+
+    padding:18px 25px;
+
+    border:none;
+
+}
+
+.card-header h5{
+
+    margin:0;
+
+    font-weight:600;
+
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+label{
+
+    font-weight:600;
+
+    margin-bottom:8px;
+    color: var(--primary);
+
+}
+
+.form-control{
+
+    border-radius:12px;
+
+    min-height:48px;
+
+    border:1px solid #ddd;
+
+    transition:.3s;
+
+}
+
+.form-control:focus{
+
+    border-color:var(--primary);
+
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+
+.blue{
+    
+    background:var(--primary);
+    color: white;
+    border-radius:10px;
+    font-weight:500;
+    border:none;
+
+}
+
+
+.blue:hover{
+
+    color:#F15b43;
+    border:2px solid #F15b43;
+
+}
+
+.btn-warning{
+
+    color:#fff;
+
+}
+
+/* =====================================================
+   IMAGE PREVIEW
+===================================================== */
+
+#previewImage{
+
+    width:100%;
+
+    max-height:230px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    margin-top:15px;
+
+    border:2px dashed var(--primary);
+
+    display:none;
+
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+.table thead{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.table thead th{
+
+    border:none;
+
+    padding:15px;
+
+    font-weight:600;
+    color: #01205a;
+
+}
+
+.table tbody td{
+
+    vertical-align:middle;
+
+    padding:15px;
+
+}
+
+.table-hover tbody tr:hover{
+
+    background:#faf5ff;
+
+}
+
+/* =====================================================
+   SLIDER IMAGE
+===================================================== */
+
+.slider-thumb{
+
+    width:90px;
+
+    height:60px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    border:2px solid #eee;
+
+    transition:.3s;
+
+}
+
+.slider-thumb:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* =====================================================
+   BADGE
+===================================================== */
+
+.badge{
+
+    font-size:13px;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+}
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+#searchSlider{
+
+    border-radius:30px;
+
+    max-width:260px;
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    font-size:14px;
+
+    color:var(--gray);
+
+}
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+.card{
+
+    animation:fadeIn .5s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:992px){
+
+    .card-header{
+
+        text-align:center;
+
+    }
+
+    #searchSlider{
+
+        width:100% !important;
+
+        margin-top:15px;
+
+    }
+
+    .main-content{
+        margin-left:0;
+        padding-top:70px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .btn{
+
+        width:100%;
+
+        margin-bottom:10px;
+
+    }
+
+    .slider-thumb{
+
+        width:70px;
+
+        height:50px;
+
+    }
+
+    .table{
+
+        font-size:14px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .container-fluid{
+
+        padding:15px;
+
+    }
+
+    h2{
+
+        font-size:24px;
+
+    }
+
+    .card-header{
+
+        font-size:18px;
+
+    }
+
+}

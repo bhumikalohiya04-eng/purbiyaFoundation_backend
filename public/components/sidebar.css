@@ -1,0 +1,221 @@
+/*=========================
+        SIDEBAR
+==========================*/
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:270px;
+
+    height:100vh;
+
+    background:#001234;
+
+    overflow-y:auto;
+
+    box-shadow:5px 0 20px rgba(0,0,0,.15);
+
+}
+
+/*=========================
+      USER SECTION
+==========================*/
+
+.logo-section{
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+.user-image{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    border:4px solid #fff;
+
+    object-fit:cover;
+
+    margin-bottom:15px;
+
+}
+
+.logo-section h5{
+
+    color:#fff;
+
+    margin-bottom:5px;
+
+    font-weight:600;
+
+}
+
+.logo-section span{
+
+    color:#ddd;
+
+    font-size:14px;
+
+}
+
+/*=========================
+        MENU
+==========================*/
+
+.sidebar-menu{
+
+    list-style:none;
+
+    padding:20px 0;
+
+    margin:0;
+
+}
+
+.sidebar-menu li{
+
+    margin:5px 12px;
+
+}
+
+.sidebar-menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    padding:13px 18px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+.sidebar-menu a i{
+
+    font-size:20px;
+
+}
+
+.sidebar-menu a:hover{
+
+    transform:translateX(6px);
+
+}
+
+.sidebar-menu a.active{
+
+    background:#ffffff;
+
+    color:#6A1B9A;
+
+    font-weight:600;
+
+}
+
+.sidebar-menu a.active i{
+
+    color:#6A1B9A;
+
+}
+
+.logout{
+
+    margin-top:20px;
+
+    color:#ffb3b3 !important;
+
+}
+
+.logout:hover{
+
+    background:#dc3545 !important;
+
+    color:#fff !important;
+
+}
+
+/*=========================
+      PAGE CONTENT
+==========================*/
+
+.main-content{
+
+    margin-left:270px;
+
+    padding:25px;
+
+}
+
+.mobile-navbar{
+    display:none;
+}
+
+/*=========================
+      RESPONSIVE
+==========================*/
+
+@media (max-width: 992px) {
+
+    .sidebar {
+        width: 270px;
+        left: -270px;
+        transition: left .3s ease;
+        z-index: 1050;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .mobile-navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 18px;
+        background: #001234;
+        color: white;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1100;
+    }
+
+    .menu-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+    }
+
+}
+
+
