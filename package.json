@@ -13,6 +13,7 @@
   "dependencies": {
     "cors": "^2.8.6",
     "db": "^6.0.3",
+    "dotenv": "^18.0.1",
     "express": "^5.2.1",
     "msql": "^1.0.3",
     "multer": "^2.2.0",
